@@ -8,13 +8,17 @@ public class AddEmployeeNode {
 	// Driver objects are thread-safe and are typically made available application-wide.
     static Driver driver;
     
-	// 3
-	// Create a Employee Node in the Sandbox DB.
+    // CreateNode method create new node to the Sandbox DB. It take 5 parameters
+    //1. String	emp_name:	<Name of the Employee>
+    //2. Int	emp_id:		<id of the Employee>
+    //3. String	neo4jServer:	<Neo4j Server url>
+    //4. String	neo4jUsr:	<Neo4j User Name>
+    //5. String	neo4jPwd:	<Neo4j password>
 	public static String createNode(String empName, int empId,String server, String user,String password)
 	 {
 			
-			//System.out.println("Inside Create Node for "+empName);
-			System.out.println("Create connection for "+empName+" empId:"+empId+" server:"+server+", user"+user+", password"+ password);
+			//Creating the Session
+			//System.out.println("Create connection for "+empName+" empId:"+empId+" server:"+server+", user"+user+", password"+ password);
 			Driver arunSandConnect = Neo4jSessionManagement.createSession(server,user, password);
 			System.out.println("Connection Created "); 
 			 
@@ -36,6 +40,7 @@ public class AddEmployeeNode {
 	        }
 	        System.out.println("After Node Created");
 			 
+	    	//Closing Session
 			 Neo4jSessionManagement.closeSession(arunSandConnect);
 			 return "Node Created for " + empName + " with emp id:" + empId;
 	    }
