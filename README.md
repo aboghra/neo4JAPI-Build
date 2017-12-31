@@ -7,7 +7,7 @@ Start the tomcate server
 Run Postman
   GET API methonds to query database
     http://localhost:8080/LetsGoNeo4Arun/rest/GoNeo4j/NodeOperation
-    paramters
+    parameters
       1. String emp_name =<name of employee>
       2. String neo4jServer=<neo4jServer url>
       3. String neo4jUsr=<neo4j user>
