@@ -24,6 +24,7 @@ Run Postman
       3. String neo4jServer=<neo4jServer url>
       4. String neo4jUsr=<neo4j user>
       5. String neo4jPwd=<neo4j user password>
+  
       Example:
       http://localhost:8080/LetsGoNeo4Arun/rest/GoNeo4j/NodeOperation?emp_name=LarryP&emp_id=211&neo4jServer=bolt://52.91.116.230:32809&neo4jUsr=neo4j&neo4jPwd=progress-injectors-scenes
   
